@@ -129,7 +129,11 @@
   justify-content: center;
   align-items: center;
 
-  font-size: 30px;
+  font-size: 20px;
+}
+
+.center strong {
+  font-size: 50px;
 }
 
 /* Enable hover only on non-touch devices */

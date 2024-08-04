@@ -65,7 +65,7 @@ export default function Home() {
             height={267}
             priority
           />
-          Comming soon
+          <strong>2025</strong>... comming soon ...
         </div>
 
         <div className={styles.grid}>

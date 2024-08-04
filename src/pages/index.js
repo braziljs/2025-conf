@@ -5,6 +5,8 @@ import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const IS_PROD = process.env.NODE_ENV === 'production';
+
 export default function Home() {
   return (
     <>
@@ -14,7 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/braziljs-conf-logo-transparente.png" />
         {
-          process.env.NODE_ENV === 'production' && (
+          IS_PROD && (
             <base href="https://braziljs.github.io/2025-conf/" target="_blank" />
           )
         }
@@ -51,8 +53,14 @@ export default function Home() {
         <div className={styles.center}>
           <Image
             className={styles.logo}
-            src="/braziljs-conf-logo-transparente.png"
-            alt="Next.js Logo"
+            src={
+              (
+                IS_PROD
+                  ? '/2025-conf/'
+                  : ''
+              ) + "/braziljs-conf-logo-transparente.png"
+            }
+            alt="BrazilJS Conference logo with transparent background"
             width={300}
             height={267}
             priority

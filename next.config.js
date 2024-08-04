@@ -6,6 +6,9 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
+  basePath: process.env.NODE_ENV === 'production'
+    ? '/2025-conf'
+    : '',
  
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,

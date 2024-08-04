@@ -13,11 +13,11 @@ export default function Home() {
         <meta name="description" content="BrazilJS is the biggest JavaScript conference in the world" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/braziljs-conf-logo-transparente.png" />
-        {
+        {/* {
           process.env.NODE_ENV === 'production' && (
             <base href="https://braziljs.github.io/2025-conf/" target="_blank" />
           )
-        }
+        } */}
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>

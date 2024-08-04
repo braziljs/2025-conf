@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "npm run build && git add . && git commit -am 'deploying to gh-pages' && git subtree push --prefix dist origin gh-pages",
     "start": "next start",
     "lint": "next lint"
   },
